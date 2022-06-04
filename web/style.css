@@ -46,6 +46,11 @@ a
 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
     border-radius: 3px;
+    transition: 0.8s;
+}
+
+.block:hover{
+    transform: scale(1.1, 1.1);
 }
 
 
@@ -76,6 +81,7 @@ a
     line-height: 15px;
     color: #979797;
     top: 12px;
+    cursor: pointer;
 }
 
 .p1 {
@@ -95,7 +101,7 @@ a
     width: 20%;
     position: relative;
     left: 70%;
-    margin-top: -25%;
+    margin-top: -10%;
     font-family: 'Roboto';
     line-height: 1.2em;
     font-size: 15px;
@@ -113,11 +119,84 @@ a
 }
 #calendar2 tbody td {
     color: rgb(44, 86, 122);
+    cursor: pointer;
 }
 #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
     color: rgb(231, 140, 92);
+    cursor: pointer;
 }
 #calendar2 tbody td.today {
     background: rgb(220, 0, 0);
     color: #fff;
+}
+
+.date {
+    width: 20%;
+    height: 42px;
+    position: relative;
+    float: right;
+    margin-top: -13%;
+    border: 1px solid #BBBBBB;
+    right: 10%;
+}
+
+.date1 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    position: relative;
+    top: 12px;
+}
+
+#t3 {
+    position: relative;
+    width: 20%;
+    left: 70%;
+}
+
+#t3 img{
+    width: 100%;
+}
+
+#t3 p{
+    font-size: 14px;
+    line-height: 16px;
+    top:5%;
+    left: 70%;
+    position: absolute;
+    color: #FFFFFF;
+}
+
+.factor {
+    width: 260px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 44px;
+    margin-left: 2%
+}
+
+#dop1 {
+position: absolute;
+}
+
+
+.block p{
+    font-size: 12px;
+    line-height: 0.92;
+    top: 24px;
+    position: relative;
+    right: 25px;
+    text-align: right;
+
+    color: #9D9D9D;
+}
+
+.c1 {
+position: relative;
+    float: right;
+    right: 25px;
+    top: 34px;
+    width: 62px;
+
 }

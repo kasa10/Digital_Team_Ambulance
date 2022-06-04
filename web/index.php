@@ -34,32 +34,59 @@ $data = mysqli_fetch_array($result);
 
     <div class="block">
         <p>вызовы сегодня/прогноз</p>
-        <h1></h1>
+        <img class="c1" src="img/30.png" style="width: 92px">
     </div>
 
-    <div class="block">
+    <div class="block" style="background: rgba(0, 178, 45, 0.56);">
         <p>Прогноз на завтра</p>
-        <h1></h1>
+        <img class="c1" src="img/14.png">
     </div>
+
+    <img src="img/factor.png" class="factor">
 
     <br/>
 
     <div class="block">
         <p>Количество бригад в работе/в простое</p>
-        <h1></h1>
+        <img class="c1" src="img/1.png">
     </div>
 
     <div class="block">
-        <p>Рекомнедуемое количество бригад на 08.06.22</p>
-        <h1></h1>
+        <p>Рекомнедуемое <br>
+            количество бригад на 08.06.22</p>
+        <img class="c1" src="img/3.png" style="width: 30px">
     </div>
+
+
+
+
+    <script>
+        function dop1(id){
+            elem = document.getElementById(id);
+            state = elem.style.display;
+            if (state =='block') elem.style.display='none';
+            else elem.style.display='block';
+        }
+    </script>
+
+
 
     <div class="dop">
         <h3 class="t1">Дополнительные факторы</h3>
-        <a class="p1">Обслуживание машин</a>
+        <a class="p1" onclick="dop1('dop1')" >Обслуживание машин</a>
         <a class="p2">Отпуск</a>
         <a class="p3">Другое</a>
-        <img src="img/dop.png" style="width: 460px; height: 180px; margin-top: 30px; display: block">
+        <img id="dop1" src="img/dop.png" style="width: 490px; height: 180px; margin-top: 30px; display: none">
+    </div>
+
+
+    <div class="date">
+        <p style="position: absolute; top: -35px; font-size: 18px;">Выберите дату</p>
+        <?php
+        $today = date("d.m.Y");
+        echo '<p class="date1">', $today ,'</p>';
+        ?>
+
     </div>
 
     <table id="calendar2">
@@ -102,6 +129,13 @@ $data = mysqli_fetch_array($result);
             }
         }
         Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+        //ПРОГНОЗ
+        document.querySelector("#calendar2 > tbody > tr:nth-child(1) > td.today").onclick = function() {
+            elem = document.getElementById('t3');
+            state = elem.style.display;
+            if (state =='') elem.style.display='none';
+            else elem.style.display='';
+        }
         // переключатель минус месяц
         document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
             Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
@@ -112,6 +146,14 @@ $data = mysqli_fetch_array($result);
         }
     </script>
 
+    
+    <div id="t3">
+            <?php
+            echo '<p>', $today ,'</p>';
+            ?>
+
+        <img src="img/prognoz.png">
+    </div>
 </div>
 
 

@@ -5,7 +5,7 @@
 
 ## Наша команда
 ### Касмынин Кирилл - kirill.kas@mail.ru
-### Леонтьев Михаил - ulstaer@gmail.com
+### Леонтьев Михаил - jmichaelj@bk.ru
 ### Останина Алина - alin.ostanina2016@yandex.ru
-### Хозяинов Александр -
-### Дмитрий Соколов - 
+### Хозяинов Александр - aleksho@gmail.com
+### Дмитрий Соколов - dimka11_94@mail.ru

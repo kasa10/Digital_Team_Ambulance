@@ -200,3 +200,12 @@ position: relative;
     width: 62px;
 
 }
+
+.m1 {
+    position: relative;
+    font-size: 22px;
+    color: #004E6C;
+    float: right;
+    right: 18%;
+    margin-top: -1%;
+}

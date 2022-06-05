@@ -24,6 +24,8 @@ $data = mysqli_fetch_array($result);
     <div class="logo">
         <a href="index.php"><img src="img/logo.png"></a>
     </div>
+
+    <h1 class="m1">Подстанция №1</h1>
     
 </div>
 
